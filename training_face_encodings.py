@@ -1,6 +1,7 @@
-# import face_recognition
-# import numpy as np
+import face_recognition
+import numpy as np
 import pickle
+import click
 
 obama_face_encoding = [[-0.1231, 0.31314, 0.12222111], [-1.12312312464, 3.538592887,-0.14313587]]
 biden_face_encoding = [[-1.1231, 0.11314, 0.62222111], [-1.121112312464, 0.538592887,0.14313587]]

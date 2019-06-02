@@ -12,26 +12,34 @@ import numpy as np
 # specific demo. If you have trouble installing it, try any of the other demos that don't require it instead.
 
 # Get a reference to webcam #0 (the default one)
-rtmp_addr = 'rtmp://server.blackant.org:1935/live_2710/hello'
-video_capture = cv2.VideoCapture(rtmp_addr)
+video_capture = cv2.VideoCapture(0)
+# rtmp_addr = 'rtmp://server.blackant.org:1935/live_2710/hello'
+# video_capture = cv2.VideoCapture(rtmp_addr)
+#
+# # Load a sample picture and learn how to recognize it.
+# obama_image = face_recognition.load_image_file("./known_people/yang.png")
+# obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+#
+# # Load a second sample picture and learn how to recognize it.
+# biden_image = face_recognition.load_image_file("./known_people/zhu.png")
+# biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
+#
+# # Create arrays of known face encodings and their names
+# known_face_encodings = [
+#     obama_face_encoding,
+#     biden_face_encoding
+# ]
+# known_face_names = [
+#     "yang",
+#     "zhu"
+# ]
 
-# Load a sample picture and learn how to recognize it.
-obama_image = face_recognition.load_image_file("./known_people/yang.png")
-obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+#load model
+f = open('saved_model/model.yaml','rb')
+known_model = pickle.load(f)
+f.close()
+known_face_encodings, known_face_names = zip(*known_model_read)
 
-# Load a second sample picture and learn how to recognize it.
-biden_image = face_recognition.load_image_file("./known_people/zhu.png")
-biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
-
-# Create arrays of known face encodings and their names
-known_face_encodings = [
-    obama_face_encoding,
-    biden_face_encoding
-]
-known_face_names = [
-    "yang",
-    "zhu"
-]
 
 # Initialize some variables
 face_locations = []

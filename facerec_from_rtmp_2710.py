@@ -14,7 +14,7 @@ import pickle
 
 # Get a reference to webcam #0 (the default one)
 #video_capture = cv2.VideoCapture(0)
-rtmp_addr = 'rtmp://192.168.1.117/live_2711/hello'
+rtmp_addr = 'rtmp://192.168.1.117/live_2710/hello'
 video_capture = cv2.VideoCapture(rtmp_addr)
 #
 # # Load a sample picture and learn how to recognize it.

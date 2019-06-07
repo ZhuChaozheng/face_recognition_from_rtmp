@@ -4,7 +4,8 @@ This project is hosted by Hohai University Robotics motion and vision Lab by Nat
 
 
 ## Get Started
-``pip3 install cycler==0.10.0 kiwisolver==1.0.1 matplotlib==2.2.2 numpy==1.14.2 opencv-python==3.4.0.12 pyparsing==2.2.0 python-dateutil==2.7.2 pytz==2018.4 six==1.11.0
+(```)
+pip3 install cycler==0.10.0 kiwisolver==1.0.1 matplotlib==2.2.2 numpy==1.14.2 opencv-python==3.4.0.12 pyparsing==2.2.0 python-dateutil==2.7.2 pytz==2018.4 six==1.11.0
 
 pip3 install dlib
 
@@ -12,10 +13,11 @@ pip3 install face_recognition
 
 git clone https://github.com/ZhuChaozheng/face_recognition_from_rtmp
 
-python3 face_recognition_from_rtmp.py --cpus 4``
+python3 face_recognition_from_rtmp.py --cpus 4
+(```)
 
-## parrallel compute
+## Parrallel Compute
 you can also set the argument to equal with your cpu cores. *``e.g. --cpus 40``*
 
-## multi-video-input
+## Multi-Video-Input
 we can easy to realize multi video sources input by using command line, set the argument --rtmp. *``e.g. --rtmp 192.168.1.117/2710/live``*

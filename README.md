@@ -34,7 +34,7 @@ git pull
 
 ./configure && make
 ```
-modify the conf file
+modify the *conf* file
 ```
 # conf/rtmp.conf
 listen              1935;
@@ -42,9 +42,12 @@ max_connections     1000;
 vhost __defaultVhost__ {
 }
 ```
+start you srs server
 ```
 ./objs/srs -c conf/rtmp.conf
 ```
+### client
+
 for pi use default camera(not USB camera)
 ```
 gst-launch-1.0 -v v4l2src ! 'video/x-raw, width=640, height=480, framerate=30/1' ! queue ! videoconvert ! omxh264enc !  h264parse ! flvmux ! rtmpsink location='rtmp://{your server IP}/rtmp/live live=1'
